@@ -11,9 +11,12 @@
   --color-header-adress: #757575;
   --bg-color-main: #2f303a;
   --bg-color-secondary: #f5f4fa;
+  --bg-footer-social: rgba(255, 255, 255, 0.1);
   --color-border: #eeeeee;
   --header-border: #ececec;
   --hero-section-transparent: rgba(47, 48, 58, 0.4);
+  /* svg color */
+  --svg-color: #afb1b8;
   /* margin */
   --portfolio-list-margin: 30px;
 }
@@ -126,6 +129,12 @@ img {
   display: flex;
 }
 
+.header-address-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header-link-address {
   padding: 32px 0;
   color: var(--color-header-adress);
@@ -134,11 +143,13 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: block;
+  fill: var(--svg-color);
 }
 
 .header-link-address:hover,
 .header-link-address:focus {
   color: var(--accent-blue);
+  fill: var(--accent-blue);
 }
 
 .header-address li:not(:last-child) {
@@ -245,30 +256,29 @@ img {
   margin-right: 30px;
 }
 
-.talant-item::before {
-  content: "";
-  display: block;
+.talant-svg {
   height: 120px;
   width: 100%;
   background-color: var(--bg-color-secondary);
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.talant-item:nth-child(1)::before {
+.talant-svg:nth-child(1) {
   background-image: url(../images/antenna\ 1.svg);
 }
 
-.talant-item:nth-child(2)::before {
+.talant-svg:nth-child(2) {
   background-image: url(../images/clock\ 1.svg);
 }
 
-.talant-item:nth-child(3)::before {
+.talant-svg:nth-child(3) {
   background-image: url(../images/diagram\ 1.svg);
 }
 
-.talant-item:nth-child(4)::before {
+.talant-svg:nth-child(4) {
   background-image: url(../images/astronaut\ 1.svg);
 }
 
@@ -338,6 +348,42 @@ img {
   margin: -1px;
 }
 
+.team-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-social-item {
+  width: 44px;
+  height: 44px;
+  align-items: center;
+}
+
+.team-social-link:hover {
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  fill: currentColor;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  fill: var(--svg-color);
+  color: var(--white);
+}
+
+.team-social-svg {
+}
+
+.team-social-list:hover {
+}
+
+/* Clents */
+
 .client-section {
   padding: 94px 0;
 }
@@ -346,11 +392,44 @@ img {
   display: flex;
 }
 
+.client-list-item {
+  width: 170px;
+  height: 92px;
+}
+
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-list-link {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  fill: var(--svg-color);
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-list-link:hover {
+  border: 1px solid var(--accent-blue);
+  fill: currentColor;
+}
+
+.client-list-svg {
+}
+
 /* Footer */
 
 .footer {
   background-color: var(--bg-color-main);
   padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
 }
 
 .footer-logo {
@@ -399,6 +478,47 @@ img {
 }
 
 .footer-list-address {
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.footer-social > h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-item {
+}
+
+.footer-social-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-footer-social);
+  border-radius: 50%;
+  fill: var(--white);
+}
+
+.footer-social-link:hover {
+  background-color: var(--accent-blue);
+}
+
+.footer-social-svg {
 }
 
 /* Portfolio Main */
@@ -465,6 +585,11 @@ img {
   margin-right: var(--portfolio-list-margin);
   margin-bottom: var(--portfolio-list-margin);
   flex-basis: calc(100% / 3 - 30px);
+}
+
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list-desc {
