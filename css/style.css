@@ -142,7 +142,9 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   fill: var(--svg-color);
 }
 
@@ -174,7 +176,7 @@ img {
 
 .hero-transparent {
   padding: 200px 0;
-  min-width: 1600px;
+  max-width: 1600px;
   height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -183,6 +185,8 @@ img {
     url(../images/hero-section-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -335,6 +339,10 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-person > .desc {
+  margin-bottom: 16px;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -352,6 +360,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
 .team-social-item {
@@ -360,7 +369,8 @@ img {
   align-items: center;
 }
 
-.team-social-link:hover {
+.team-social-link:hover,
+.team-social-link:focus {
   border-radius: 50%;
   background-color: var(--accent-blue);
   fill: currentColor;
@@ -413,7 +423,8 @@ img {
   justify-content: center;
 }
 
-.client-list-link:hover {
+.client-list-link:hover,
+.client-list-link:focus {
   border: 1px solid var(--accent-blue);
   fill: currentColor;
 }
@@ -430,6 +441,7 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -484,7 +496,7 @@ img {
   margin-left: 70px;
 }
 
-.footer-social > h2 {
+.footer-social > p {
   font-size: 14px;
   text-transform: uppercase;
   color: var(--white);
@@ -514,7 +526,8 @@ img {
   fill: var(--white);
 }
 
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--accent-blue);
 }
 
@@ -556,7 +569,6 @@ img {
 .portfolio-button:focus {
   background-color: var(--accent-blue);
   color: var(--white);
-  padding: 6px 25px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -587,7 +599,12 @@ img {
   flex-basis: calc(100% / 3 - 30px);
 }
 
-.portfolio-list-item:hover {
+.portfolio-list-link {
+  display: block;
+}
+
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
